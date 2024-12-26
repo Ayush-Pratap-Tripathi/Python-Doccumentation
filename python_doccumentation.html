@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Doccumentation</title>
+    <link rel="stylesheet" href="doccumentation.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header><h1>Python Doccumentation</h1></header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a href="#Basic_Python_Syntax" class="nav-link">Basic Python Syntax</a></li>
+            <li><a href="#Control_Flow_in_Python" class="nav-link">Control Flow in Python</a></li>
+            <li><a href="#Data_Structures_in_Python" class="nav-link">Data Structures in Python</a></li>
+            <li><a href="#Functions_in_python" class="nav-link">Functions in python</a></li>
+            <li><a href="#Object_Oriented_Programming(OOP)" class="nav-link">Object Oriented Programming(OOP)</a></li>
+            <li><a href="#Exception_Handling_in_Python" class="nav-link">Exception Handling in Python</a></li>
+            <li><a href="#File_Handling_in_Python" class="nav-link">File Handling in Python</a></li>
+            <li><a href="#Modules_and_Packages" class="nav-link">Modules and Packages</a></li>
+            <li><a href="#Regular_Expressions" class="nav-link">Regular Expressions</a></li>
+            <li><a href="#Functional_Programming" class="nav-link">Functional Programming</a></li>
+            <li><a href="#Working_with_APIs" class="nav-link">Working with APIs</a></li>
+            <li><a href="#Working_with_Databases_in_Python" class="nav-link">Working with Databases in Python</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header class="main-header">Introduction</header>
+            <article>
+                
+                <p class="header">Overview of Python</p>
+                <p>Python is a high-level, general-purpose programming language known for its readability and
+                    simplicity. It was created by Guido van Rossum and first released in 1991. Python emphasizes code
+                    readability and allows developers to express concepts in fewer lines of code than languages like C++
+                    or Java. The language supports multiple programming paradigms, including procedural,
+                    object-oriented, and functional programming.</p>
+                <div class="key-features">
+                    <p class="header">Key Features of python include: </p>
+                    <ol>
+                        <li>Readable and Concise Syntax: Python code is designed to be easy to read, with a clear and
+                            straightforward syntax. This readability makes Python an excellent choice for beginners and
+                            experienced developers alike.</li>
+                        <li>Dynamically Typed: Python is dynamically typed, meaning you don't need to specify variable
+                            types explicitly. This contributes to a more flexible and rapid development process.</li>
+                        <li>Interpreted Language: Python is an interpreted language, which means that code is executed
+                            line by line by an interpreter, without the need for compilation. This leads to quicker
+                            development cycles.</li>
+                        <li>Large Standard Library: Python comes with a comprehensive standard library that provides
+                            modules and packages for various functionalities, making it versatile for a wide range of
+                            applications.</li>
+                        <li>Community Support: Python has a vibrant and active community, contributing to its extensive
+                            ecosystem of libraries, frameworks, and tools. This community support is valuable for
+                            learning and problem-solving.</li>
+                        <li>Cross-Platform Compatibility: Python is compatible with major operating systems, including
+                            Windows, macOS, and Linux, allowing developers to write code that can run on different
+                            platforms without modification.</li>
+                    </ol>
+                </div>
+                <div class="history">
+                    <p class="header">History of Python</p>
+                    <ul>
+                        <li>Python was conceived in the late 1980s by Guido van Rossum, a Dutch programmer.</li>
+                        <li>The first official Python release, Python 0.9.0, came in 1991.</li>
+                        <li>Python 2, a significant version with various improvements, was released in 2000.</li>
+                        <li>Python 3, a backward-incompatible version with a focus on fixing design issues, was
+                            introduced in 2008. Both Python 2 and Python 3 existed simultaneously for a transition
+                            period.</li>
+                        <li>Guido van Rossum stepped down as the "Benevolent Dictator For Life" (BDFL) in 2018, marking
+                            a change in the language's governance model.</li>
+                        <li>Python has continued to evolve, with regular releases and updates, as well as the growth of
+                            its ecosystem.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Basic_Python_Syntax">
+            <header class="main-header">Basic Python Syntax</header>
+            <article>
+                <div class="variables-data-types">
+                    <p class="header">Variables and Datatypes in Python: </p>
+                    <p>In Python, a variable is a container for storing values. You can think of it as a label attached
+                        to a specific location in the computer's memory. When you create a variable, you are essentially
+                        assigning a name to a value. Variables in Python do not require explicit declaration.</p>
+                    <code>
+# Variable assignment 
+x = 10 
+name = "John" 
+pi_value = 3.14 
+is_valid = True 
+                    </code>
+                    <p class="data-types">Python has several built-in data types, including: </p>
+                    <ol>
+                        <li>Numberic Types:
+                            <ul>
+                                <li>'int': Integer type (e.g., 5, -2, 0).</li>
+                                <li>'float': Floating-point type (e.g., 3.14, -2.5).</li>
+                            </ul>
+                        </li>
+                        <li>Text Type:
+                            <ul>
+                                <li>'str': String type (e.g. "Hello", "Python").</li>
+                            </ul>
+                        </li>
+                        <li>Boolean Type:
+                            <ul>
+                                <li>'bool': Boolean type with values 'True' or 'False'.</li>
+                            </ul>
+                        </li>
+                        <li>Sequence Types:
+                            <ul>
+                                <li>'List': Ordered collection of items (e.g., '[1, 2, 3]').</li>
+                                <li>'tuple': Immutable ordered collection of items (e.g., '(1, 2, 30').</li>
+                                <li>'range'L Represents a range of values.</li>
+                            </ul>
+                        </li>
+                        <li>Set Types:
+                            <ul>
+                                <li>'set': Unordered collection of unique items (e.g., '{1, 2, 3}').</li>
+                            </ul>
+                        </li>
+                        <li>Mapping Type:
+                            <ul>
+                                <li>'deic': dictionary type (e.g., '{"name": "John", "age": 25}').</li>
+                            </ul>
+                        </li>
+                        <li>None Type:
+                            <ul>
+                                <li>'None': Represents the absence of a value or a null value.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="operators">
+                    <p class="header">Basic Operations in Python: </p>
+                    <p>Python supports various basic operations, including arithmetic, comparison, and logical
+                        operations.</p>
+                    <ol>
+                        <li>Arithmetic Operations:
+                            <code>
+a = 5
+b = 2
+
+# Addition
+result_add = a + b  # 7
+
+# Subtraction
+result_sub = a - b  # 3
+
+# Multiplication
+result_mul = a * b  # 10
+
+# Division
+result_div = a / b  # 2.5
+
+# Floor Division
+result_floor_div = a // b  # 2
+
+# Modulus (Remainder)
+result_mod = a % b  # 1
+
+# Exponentiation
+result_exp = a ** b  # 25
+                            </code>
+                        </li>
+                        <li>Comparison Operations:
+                            <code>
+x = 5
+y = 10
+
+# Equal to
+is_equal = x == y  # False
+
+# Not equal to
+not_equal = x != y  # True
+
+# Greater than
+greater_than = x > y  # False
+
+# Less than
+less_than = x < y  # True
+
+# Greater than or equal to
+greater_than_equal = x >= y  # False
+
+# Less than or equal to
+less_than_equal = x <= y  # True
+                            </code>
+                        </li>
+                        <li>
+                            Logical Operations:
+                            <code>
+p = True
+q = False
+
+# Logical AND
+result_and = p and q  # False
+
+# Logical OR
+result_or = p or q  # True
+
+# Logical NOT
+result_not = not p  # False
+                            </code>
+                        </li>
+                    </ol>
+                </div>
+                <div class="comments-print">
+                    <p class="header">Comments and Print statements in Python: </p>
+                    <ol>
+                        <li>Comments:
+                            <ul>
+                                <li>Comments in Python begin with the # symbol and are used for adding explanatory notes
+                                    within the code. Comments are ignored by the Python interpreter.</li>
+                                <code>
+# This is a single-line comment
+
+"""
+This is a multi-line comment.
+It can span multiple lines.
+"""
+                                </code>
+                            </ul>
+                        </li>
+                        <li>Print Statements:
+                            <ul>
+                                <li>The print() function is used to output information to the console. It can display
+                                    variables, strings, and the results of expressions.</li>
+                                <code>
+name = "Alice"
+age = 30
+
+print("Hello, " + name)  # Concatenation
+print("Age:", age)  # Comma-separated values
+print(f"{name} is {age} years old.")  # f-string (formatted string)
+                                </code>
+                                <p class="output">Output: </p>
+                                <code>
+Hello, Alice
+Age: 30
+Alice is 30 years old.
+                                </code>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Control_Flow_in_Python">
+            <header class="main-header">Control Flow in Python</header>
+            <article>
+                <p>Control flow in Python refers to the order in which statements and instructions are executed in a
+                    program. Python provides several structures to control the flow of execution, including conditional
+                    statements (if, elif, else), loops (for, while), and control flow statements (break, continue,
+                    pass). Let's explore each of these:</p>
+                <ol>
+                    <li>Conditional Statmeents:
+                        <ul>
+                            <li>Conditional statements allow you to execute different blocks of code based on specified
+                                conditions.</li>
+                            <code>
+x = 10
+
+if x > 0:
+    print("Positive")
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative")
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Loops:
+                        <ul>
+                            <li>Loops are used to repeatedly execute a block of code. Python supports both for and while
+                                loops.</li>
+                            <li>For Loop:
+                                <ul>
+                                    <li>Iterates over a sequence (e.g., list, tuple, string, or range).</li>
+                                    <code>
+for i in range(5):
+    print(i)
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>While Loop:
+                                <ul>
+                                    <li>Continues executing as long as a specified condition is 'True'</li>
+                                    <code>
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+                                    </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Control Flow Statements:
+                        <ul>
+                            <li>Break:
+                                <ul>
+                                    <li>Terminates the innermost loop (for a while).</li>
+                                    <code>
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Continue:
+                                <ul>
+                                    <li>Skips the rest of the code inside a loop for the current iteraition and proceeds
+                                        to the next iteration.</li>
+                                    <code>
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Pass:
+                                <ul>
+                                    <li>Acts as a placeholder, doing nothing. It is used when syntactically some code is
+                                        required but no action is needed.</li>
+                                    <code>
+for i in range(5):
+    if i == 2:
+        pass
+    else:
+        print(i)
+                                    </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>The indentation (whitespace) is crucial in Python as it determines the blocks of code. Unlike many
+                    other programming languages that use curly braces, Python uses indentation to signify code blocks.
+                    This enhances code readability.</p>
+                <p><b>Note: </b>Python relies on the colon (':') to indicate the start of an indented code block after a
+                    control flow statement.</p>
+                <p>Control flow structures allow you to create more complex and flexible programs by controlling the
+                    order of execution based on conditions and loops. They are essential for building decision-making
+                    processes and iterating over data or tasks.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Data_Structures_in_Python">
+            <header class="main-header">Data Structures in Python</header>
+            <article>
+                <ol>
+                    <li>Lists:
+                        <ul>
+                            <li>Lists are ordered, mutable sequences that can contain elements of different data types.
+                            </li>
+                            <code>
+my_list = [1, 2, 3, 'four', 5.0]
+                        </code>
+                            <li>Common List Methods:
+                                <ul>
+                                    <li>'append()': Adds an element to the end of the list.</li>
+                                    <code>
+my_list.append(6)
+                                </code>
+                                    <li>'extend()': Extends the list by appending elements from an iterable.</li>
+                                    <code>
+my_list.extend([7, 8])
+                                </code>
+                                    <li>'insert()': Inserts an element at a specified position.</li>
+                                    <code>
+my_list.insert(2, 'new_element')
+                                </code>
+                                    <li>'remove()': Removes the first occurrence of a specified elemen.</li>
+                                    <code>
+my_list.remove('four')
+                                </code>
+                                    <li>'pop': Removes and returns the element at the specified position.</li>
+                                    <code>
+popped_element = my.list.pop(3)
+                                </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Tuples:
+                        <ul>
+                            <li>Tuples are ordered, immutable sequences, often used to represent fixed collections of
+                                items.</li>
+                            <code>
+my_tuple = (1, 2, 3, 'four', 5.0)
+                        </code>
+                            <li>Common Tuple Methods:
+                                <ul>
+                                    <li>Tuples do not have many methods since they are immutable. You can use built-in
+                                        functions like 'len()' and 'count()'.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Sets:
+                        <ul>
+                            <li>Sets are unorderred collections of unique elements.</li>
+                            <code>
+my_set = {1, 2, 3, 'four', 5.0}
+                        </code>
+                            <li>Common Set Methods:
+                                <ul>
+                                    <li>'add()': Adds an element to the set.</li>
+                                    <code>
+my_set.add(6)
+                                </code>
+                                    <li>'remove()': Removes a specified element from the set.</li>
+                                    <code>
+my_set.remove('four')
+                                </code>
+                                    <li>'discard()': Removes a specified element from the set if it is present.</li>
+                                    <code>
+my_set.discart(3)
+                                </code>
+                                    <li>'union()': Returns the union of two sets. </li>
+                                    <code>
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union_set = set1.union(set2)
+                                </code>
+                                    <li>'intersection()': Returns the intersection of two sets.</li>
+                                    <code>
+intersection_set = set1.intersection(set2)
+                                </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Dictionaries:
+                        <ul>
+                            <li>Dictionaries are unordered collections of key-value pairs.</li>
+                            <code>
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+                        </code>
+                            <li>Common Dictionary Methods:
+                                <ul>
+                                    <li>'keys()': Returns a list of all keys in the dictionary.</li>
+                                    <code>
+keys_list = my_dict.keys()
+                                </code>
+                                    <li>'values()': Returns a list of all values in the dictionary.</li>
+                                    <code>
+values_list = my_dict.values()
+                                </code>
+                                    <li>'items': Returns a list of key-value pairs as tuples.</li>
+                                    <code>
+items_list = my_dict.items()
+                                </code>
+                                    <li>'get()': Returns the value associated with a specified key. It's a safe way to
+                                        access dictionary values.</li>
+                                    <code>
+age = may_dict.get('age')
+                                </code>
+                                    <li>'update()': Updates the dictionary with elements from another dictionary or from
+                                        an iterable of key-value pairs.</li>
+                                    <code>
+new_data = {'occupation': 'developer'}
+my_dict.update(new_data)
+                                </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>These data structures and their methods provide a powerful way to organize and manipulate data in
+                    Python. Understanding when and how to use each structure is crucial for writing efficient and
+                    effective code.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Functions_in_python">
+            <header class="main-header">Functions in python</header>
+            <article>
+                <p>A function in Python is a reusable block of code that performs a specific task. Functions help in
+                    organizing code, promoting code reusability, and making the code more modular. A function is defined
+                    using the 'def' keyword, followed by the function name and a block of code.</p>
+                <b>Defining and calling Funtions: </b>
+                <code>
+def greet(): 
+    print("Hello, Welcome!")
+
+#Calling the function
+greet()
+            </code>
+                <p class="header">Function Parameters and Return Values: </p>
+                <ul>
+                    <li>Parameters:
+                        <ul>
+                            <li>Parameters are variables that you define in the funtion's signature. They act as
+                                placeholders for values that will be passed to the function when it is called.</li>
+                            <code>
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")
+                        </code>
+                        </ul>
+                    </li>
+                    <li>Return Values:
+                        <ul>
+                            <li>Functions can return values using the 'return' keyword. The calling code can then use
+                                the returned value.</li>
+                            <code>
+def add_numbers(a, b): 
+    return a + b
+
+result = add_numbers(3, 5)
+print(result) #OUtput: 8
+                        </code>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="header">Scope and Lifetime of Variables: </p>
+                <ul>
+                    <li>Scope:
+                        <ul>
+                            <li>The scope of a variable defines where in the code the variable can be accessed. <br>In
+                                Python, variables have local scope or global scope.</li>
+                            <li>Local variables are defined inside a function and can only be accessed within that
+                                function.</li>
+                            <li>Global variables are defined outside any function and can be accessed throughout the
+                                entire program.</li>
+                            <code>
+global_varibale = "I am global"
+
+def my_function(): 
+    local_variable = "I am local"
+    print(global_variable)
+    print(local_variable)
+
+my_function()
+print(global_variable)
+                        </code>
+                        </ul>
+                    </li>
+                    <li>Lifetime:
+                        <ul>
+                            <li>The lifetime of a variable is the duration during which the variable exists in the
+                                computer's memory.</li>
+                            <li>Local variables have a shorter lifetime; they are created when the function is called
+                                and cease to exist when the function completes.</li>
+                            <li>Global variables have a longer lifetime; they persist throughout the program's
+                                execution.</li>
+                            <code>
+def function_with_lifetime():
+    local_variable = "I exist temporarily"
+    print(local_variable)
+
+function_with_lifetime()  # local_variable exists within the function
+# print(local_variable)  # This would result in an error as local_variable is not accessible here
+                        </code>
+                        </ul>
+                    </li>
+                </ul>
+                <p>In summary, functions in Python provide a way to structure code, and understanding function
+                    parameters, return values, scope, and lifetime of variables is crucial for writing modular and
+                    maintainable code.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Object_Oriented_Programming(OOP)">
+            <header class="main-header">Object Oriented Programming(OOP)</header>
+            <article>
+                <p>Object-Oriented Programming is a paradigm that revolves around the concept of "objects." An object is
+                    a self-contained unit that consists of both data and the methods that operate on that data. Python
+                    is an object-oriented programming language, and it supports key OOP principles:</p>
+                <ol>
+                    <li>Classes and Objects:
+                        <ul>
+                            <li>A class is a blueprint for creating objects. It defines the properties (attributes) and
+                                behaviors (methods) that the objects of the class will have.</li>
+                            <code>
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print(f"{self.name} says Woof!")
+
+# Creating objects (instances) of the class
+my_dog = Dog("Buddy", 3)
+your_dog = Dog("Max", 5)
+
+# Accessing object attributes and calling methods
+print(my_dog.name)
+my_dog.bark()
+                            </code>
+                        </ul>
+                    </li>
+                    <li>INheritance:
+                        <ul>
+                            <li>Inheritance allows a new class (subclass/derived class) to inherit attributes and
+                                methods from an existing class (base class/parent class). It promotes code reuse and
+                                establishes a hierarchy of classes.</li>
+                            <code>
+class Animal:
+    def __init__(self, species):
+        self.species = species
+
+    def make_sound(self):
+        pass
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow!")
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof!")
+
+cat = Cat("Felis catus")
+dog = Dog("Canis lupus familiaris")
+
+cat.make_sound()
+dog.make_sound()
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Polymorphism:
+                        <ul>
+                            <li>Polymorphism allows objects of different classes to be treated as objects of a common
+                                base class. It simplifies code and promotes flexibility.</li>
+                            <code>
+def animal_sound(animal):
+    animal.make_sound()
+
+cat = Cat("Felis catus")
+dog = Dog("Canis lupus familiaris")
+
+animal_sound(cat)
+animal_sound(dog)
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Encapsulation:
+                        <ul>
+                            <li>Encapsulation is the bounding of data (attributes) and methods that operate on the data
+                                into a single unit (class). It restricts direct access to some of an object's
+                                components, emphasizing the concept of information hiding.</li>
+                            <code>
+class BankAccount:
+    def __init__(self, balance):
+        self._balance = balance  # _ indicates a protected attribute
+
+    def get_balance(self):
+        return self._balance
+
+    def deposit(self, amount):
+        self._balance += amount
+
+    def withdraw(self, amount):
+        if amount <= self._balance:
+            self._balance -= amount
+        else:
+            print("Insufficient funds.")
+
+account = BankAccount(1000)
+print(account.get_balance())
+account.withdraw(500)
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Abstraction:
+                        <ul>
+                            <li>Abstraction involves simplifying complex systems by modelling classes based on
+                                real-world entities and hiding unnecessary details. It allows programmers to focus on
+                                essential features without being concerned with internal complexities.</li>
+                            <code>
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Constructors and Destructors:
+                        <ul>
+                            <li><b>Constructors: </b>Constructors are special methods in a class used for initializing
+                                the attributes of an object when it is created. In Python, the '__init__' method serves
+                                as the constructor.</li>
+                            <code>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+                            </code>
+                            <li><b>Destructors: </b>Python does not have a built-in destructor like some other
+                                languages. However, the '__del__' method can be used as a finalization method, but its
+                                usage is limited and not recommended in most cases. Python relies on automatic garbage
+                                collection for memory management.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Object-oriented programming provides a powerful way to structure and organize code, making it more
+                    modular, reusable, and scalable. It enhances code readability, promotes code organization, and
+                    facilitates the design and implementation of complex systems.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Exception_Handling_in_Python">
+            <header class="main-header">Exception Handling in Python</header>
+            <article>
+                <p>Exception handling is a mechanism in Python that allows you to handle errors or exceptional
+                    situations gracefully, preventing your program from crashing. The key components of exception
+                    handling include 'try', 'except', 'else', and 'finally' blocks.</p>
+                <ol>
+                    <li>Try and Except Blocks:
+                        <ul>
+                            <li>The 'try' block is used to enclose the code that might raise an exception.</li>
+                            <li>The 'except' block contains the code that is executed if an exception occurs is the
+                                corresponding 'try' block.</li>
+                            <code>
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Else Block:
+                        <ul>
+                            <li>The 'else' block is executed if no exceptions occur in the preciding 'try' block. It is
+                                optional.</li>
+                            <code>
+try:
+    result = 10 / 2
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print("Division successful. Result:", result)
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Finally Block:
+                        <ul>
+                            <li>The 'finally' block is always executed, whether an exception occurs or not. It is often
+                                used for cleanup operations (e.g., closing files or network connections).</li>
+                            <code>
+try:
+    file = open("example.txt", "r")
+    # Code to read from the file
+except FileNotFoundError:
+    print("File not found!")
+finally:
+    file.close()  # Ensure the file is closed, whether an exception occurs or not
+                            </code>
+                        </ul>
+                    </li>
+                    <li>Raising and Handling Exceptions:
+                        <ul>
+                            <li>You can explicitly raise exceptions using the 'raise' statement. This is useful when you
+                                want to indicate an error in your code.</li>
+                            <code>
+def divide_numbers(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero!")
+    return a / b
+
+try:
+    result = divide_numbers(10, 0)
+except ValueError as e:
+    print(f"Error: {e}")
+                            </code>
+                            <li>You can also catch multiple exceptions in a single 'except' block or use a generic
+                                'except; block to catch any exception.</li>
+                            <code>
+try:
+    # Some code that might raise an exception
+except (ValueError, TypeError) as e:
+    print(f"Caught an exception: {e}")
+except Exception as e:
+    print(f"Caught a generic exception: {e}")
+                            </code>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Exception handling is crucial for writing robust and reliable code. It allows you to anticipate and
+                    gracefully handle unexpected situations, improving the overall stability of your programs. Proper
+                    use of exception handling enhances the user experience by providing informative error messages and
+                    preventing abrupt program termination.</p>
+            </article>
+        </section>
+        <section class="main-section" id="File_Handling_in_Python">
+            <header class="main-header">File Handling in Python</header>
+            <article>
+                <p>File handling in Python involves working with files to read data from them or write data to them.
+                    Python provides built-in functions and modules for handling various file formats, including text
+                    files, CSV files, and JSON files.</p>
+                <ol>
+                    <li>Reading form and Writing to Text Files:
+                        <ul>
+                            <li>Reading from a Text File:
+                                <ul>
+                                    <li>The 'open()' function is used to open a file. The 'read()' or 'readline()'
+                                        method can then be used to read the content of the file.</li>
+                                    <code>
+# Reading from a text file
+with open("example.txt", "r") as file:
+    content = file.read()
+    # or content = file.readlines()
+    print(content)
+                                </code>
+                                </ul>
+                            </li>
+                            <li>Writing to a Text File:
+                                <ul>
+                                    <li>The 'open()' function with the mode '"w"' is used to open a file for writing.
+                                        <br>The 'write()' method is used to write content to the file.
+                                    </li>
+                                    <code>
+# Writing to a text file
+with open("output.txt", "w") as file:
+    file.write("Hello, this is a sample text.")
+                                </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Working with CSV Files:
+                        <ul>
+                            <li>Reading from a CSV File:
+                                <ul>
+                                    <li>Python's 'csv' module provides functionalities for reading and writing CSV
+                                        files.</li>
+                                    <code>
+import csv
+
+# Reading from a CSV file
+with open("data.csv", "r") as csv_file:
+    csv_reader = csv.reader(csv_file)
+    for row in csv_reader:
+        print(row)
+                                </code>
+                                </ul>
+                            </li>
+                            <li>Writing to a CSV File:
+                                <ul>
+                                    <li>To write to a CSV file, use the 'csv.writer' object.</li>
+                                    <code>
+import csv
+
+# Writing to a CSV file
+data = [["Name", "Age"], ["Alice", 25], ["Bob", 30], ["Charlie", 22]]
+with open("output.csv", "w", newline="") as csv_file:
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerows(data)
+                                </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Working with JSON Files:
+                        <ul>
+                            <li>Reading from a JSON File:
+                                <ul>
+                                    <li>Python's 'json' module is used to work with JSON files.</li>
+                                    <code>
+import json
+
+# Reading from a JSON file
+with open("data.json", "r") as json_file:
+    data = json.load(json_file)
+    print(data)
+                                </code>
+                                </ul>
+                            </li>
+                            <li>Writing to a JSON File:
+                                <ul>
+                                    <li>Use the 'json.dump()' or 'json.dumps()' method to write data to a JSON file.
+                                    </li>
+                                    <code>
+import json
+
+# Writing to a JSON file
+data = {"name": "John", "age": 30, "city": "New York"}
+with open("output.json", "w") as json_file:
+    json.dump(data, json_file, indent=2)
+                                </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>These examples cover basic file handling operations in Python. It's important to use the 'with'
+                    statement when working with files, as it automatically takes care of closing the file, even if an
+                    exception occurs. Additionally, the modes (e.g., "r" for read, "w" for write) in the 'open()'
+                    function define how the file should be opened. Understanding these basics will enable you to handle
+                    a variety of file formats and effectively manage data in your Python programs.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Modules_and_Packages">
+            <header class="main-header">Modules and Packages</header>
+            <article>
+                <p>In Python, modules and packages are mechanisms for organizing and structuring code, making it more
+                    modular, reusable, and maintainable. They help in breaking down large codebases into smaller,
+                    manageable components.</p>
+                <ol>
+                    <li>Modules:
+                        <ul>
+                            <li>A module in Python is a single Python file that can contain functions, variables, and
+                                classes. It acts as a container for organizing code.</li>
+                            <li>To create a module, save your Python code in a file with a '.py' extension. For example,
+                                if you have a file named 'my_module.py': </li>
+                            <code>
+# my_module.py
+def greet(name):
+    print(f"Hello, {name}!")
+                        </code>
+                            <li>To use functions of variables from a module, you can import the module using the
+                                'import' statement.</li>
+                            <code>
+import my_module
+
+my_module.greet("Alice")
+                        </code>
+                            <li>Functions and variables in a module are encapsulated within the module's namespace,
+                                preventing naming conflicts with other modules.</li>
+
+                        </ul>
+                    </li>
+                    <li>Packages:
+                        <ul>
+                            <li>A package is a collection of related Python modules grouped together in a directory. It
+                                helps in organizing and structuring code on a higher level than individual modules.</li>
+                            <li>Creating a package:
+                                <ul>
+                                    <li>To create a package, you need to organize your modules within a directory. The
+                                        directory must contain a special file named '__init__.py'. This file can be
+                                        empty or contain package-level initialization code.</li>
+                                    <code>
+my_package/
+├── __init__.py
+├── module1.py
+├── module2.py
+                                </code>
+                                </ul>
+                            </li>
+                            <li>Using a Package:
+                                <ul>
+                                    <li>You can import modules from a package using the dot notation.</li>
+                                    <code>
+from my_package import module1, module2
+
+module1.some_function()
+module2.some_other_function()
+                                </code>
+                                </ul>
+                            </li>
+                            <li>Subpackages:
+                                <ul>
+                                    <li>Packages can contain subpackages, which are essentially nested directories with
+                                        their own '_-init__.py' files.</li>
+
+                                </ul>
+                            </li>
+                            <li>Namespace and Avoiding Name Conflicts:
+                                <ul>
+                                    <li>Packages provide a way to create a hierarchical namespace, preventing naming
+                                        conflicts even when different modules or packages have functions or variables
+                                        with the same name.</li>
+                                </ul>
+                            </li>
+                            <li>Example:
+                                <ul>
+                                    <li>A package named 'geometry' with modules for handling geometric shapes: </li>
+                                    <code>
+geometry/
+├── __init__.py
+├── shapes/
+│   ├── __init__.py
+│   ├── circle.py
+│   └── rectangle.py
+└── utilities/
+    ├── __init__.py
+    └── math_operations.py
+                                </code>
+                                </ul>
+                            </li>
+                            <li>Importing from Packages: </li>
+                            <code>
+from geometry.shapes.circle import calculate_area as circle_area
+from geometry.utilities.math_operations import add_numbers
+
+radius = 5
+area = circle_area(radius)
+result = add_numbers(10, 20)
+                        </code>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Modules and packages are fundamental to structuring Python projects and promoting code organization.
+                    They enhance code readability, maintainability, and reusability, making it easier to collaborate on
+                    large codebases and manage dependencies effectively.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Regular_Expressions">
+            <header class="main-header">Regular Expressions</header>
+            <article>
+                <p>Regular expressions (regex or regexp) are powerful tools for pattern matching and text manipulation.
+                    In Python, the 're' module provides support for regular expressions. Regular expressions are strings
+                    that describe search patterns, allowing you to match, search, and manipulate text.</p>
+                <p class="header">here are some key concepts and functions related to regular expressions in Python:
+                </p>
+                <ol>
+                    <li>Basic Patterns:
+                        <ul>
+                            <li>Literal Characters:
+                                <ul>
+                                    <li>Ordinary characters in a regular expression match themselves. For example, the
+                                        regular expression 'pytho' matches the string "python" in the input.</li>
+                                </ul>
+                            </li>
+                            <li>Metacharacters:
+                                <ul>
+                                    <li>Special characters in regular expressions that have a special meaning. Some
+                                        common metacharacters include '.' (matches any character except a newline), '*'
+                                        (matches 0 or more occurrences), '+' (matches 1 or more occurrences), '?'
+                                        (matches 0 or 1 occurrence), '^' (matches the start of a string), and '$'
+                                        (matches the end of a string).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Using the 're' Module:
+                        <ul>
+                            <li>Importing the Module: </li>
+                            <code>
+import re
+                            </code>
+                            <li>Matching patterns:
+                                <ul>
+                                    <li>The 're.match()' function checks for a match only at the beginning of a string.
+                                    </li>
+                                    <code>
+pattern = re.compile(r'hello')
+result = pattern.match('Hello world')
+if result: 
+    print('Match found!')
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Searching Patterns:
+                                <ul>
+                                    <li>The 're.search()' function searches the entire string for a match.</li>
+                                    <code>
+pattern = re.compile(r'world')
+result = pattern.search('hello world')
+if result: 
+    print("Match found!")
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Finding All Matches:
+                                <ul>
+                                    <li>The 're.findall()' function return all non-overlapping matches as a list.</li>
+                                    <code>
+pattern = re.compile(r'\d+')
+result = pattern.findall('There are 123 apples and 456 oranges.')
+print(result)
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Substituting Text:
+                                <ul>
+                                    <li>The 're.sub()' function replaces occurrences of a pattern with specified text.
+                                    </li>
+                                    <code>
+pattern = re.compile(r'\d+')
+result = pattern.sub('X', 'There are 123 apples and 456 oranges.')
+print(result)
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Modifiers:
+                                <ul>
+                                    <li>Regular expressions can include modifiers to change their behavior. For example,
+                                        the 're.IGNORECASE' modifier makes the pattern case-insensitive.</li>
+                                    <code>
+pattern = re.compile(r'apple', re.IGNORECASE)
+result = pattern.search('I like Apple. ')
+                                    </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Regular Expression Patterns:
+                        <ul>
+                            <li>Character Classes:
+                                <ul>
+                                    <li>Character classes allow you to match any one of a set of characters. For
+                                        example, '[aeiou]' matches any vowel.</li>
+                                </ul>
+                            </li>
+                            <li>Quantifiers:
+                                <ul>
+                                    <li>Quantifiers specify the number of occurrences of a character or group For
+                                        example, 'a{2, 3}' matches 2 to 4 consecutive 'a' characters.</li>
+                                </ul>
+                            </li>
+                            <li>Anchors:
+                                <ul>
+                                    <li>Anchors specify the position of a match. For example, '^' matches the start of a
+                                        string, and '$' matches the end.</li>
+                                </ul>
+                            </li>
+                            <li>Escapte Characters:
+                                <ul>
+                                    <li>Some characters have special meaning in regular expressions. To match them
+                                        literally, use an escape character ('\'). For example, '\.' matches a literal
+                                        period.</li>
+                                </ul>
+                            </li>
+                            <li>Grouping and capturing:
+                                <ul>
+                                    <li>Parentheses are used for grouping and capturing parts of a pattern. The captured
+                                        group can be referenced later.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <p class="header">Example: </p>
+                    <code>
+    import re
+    
+    # Matching an email address
+    pattern = re.compile(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
+    
+    email = 'user@example.com'
+    if pattern.match(email):
+        print("Valid email address.")
+    else:
+        print("Invalid email address.")
+                    </code>
+                </ol>
+                <p>This is a simple example, but regular expressions can become quite complex depending on the patterns
+                    you need to match. They are a powerful tool for text processing and are widely used in tasks like
+                    data validation, search and replace operations, and parsing.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Functional_Programming">
+            <header class="main-header">Functional Programming</header>
+            <article>
+                <p>Functional programming is a programming paradigm that treats computation as the evaluation of
+                    mathematical functions and avoids changing-state and mutable data. In Python, functional programming
+                    is supported, and it includes features such as lambda functions, and higher-order functions like
+                    'map', 'filter', and 'reduce'.</p>
+                <ol>
+                    <li>Lambda Functions:
+                        <ul>
+                            <li>A lambda function, also known as an anonymous function, is a concise way to create
+                                small, on-time-use functions without formally defining them using the 'def' keyword.
+                            </li>
+                            <li>Syntax:
+                                <ul>
+                                    <code>
+lambda arguments: expression
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Example:
+                                <ul>
+                                    <code>
+add = lambda x, y: x + y
+result = add(3, 5)  # Result: 8
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Use Cases:
+                                <ul>
+                                    <li>Lambda functions are often used in situations where a small function is needed
+                                        for a short duration, such as in the arguments of higher-order functions. </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Higher-Ordeer Functions:
+                        <ul>
+                            <li>Map Functions:
+                                <ul>
+                                    <li>The 'map()' function applies a given function to all items in an iterable and
+                                        returns that produces the results.</li>
+                                    <code>
+numbers = [1. 2. 3. 4. 5]
+squared = map(lambda x: x**2, numbers)
+#squared is now an iterator with the squared values: [1, 4, 9, 16, 25]
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Filter Function:
+                                <ul>
+                                    <li>The 'filter()' function constructs an iterator from elements of an iterable for
+                                        which a function returns true.</li>
+                                    <code>
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+evens = filter(lambda x: x % 2 == 0, numbers)
+#evens is now an iterator with the even numbers: [2, 4, 6, 8]
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Reduce Functions:
+                                <ul>
+                                    <li>The 'reduce()' function, which is now part of the 'functools' module,
+                                        successively applies a function to the elements of an iterable to reduce it to a
+                                        single value.</li>
+                                    <code>
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+product = reduce(lambda x, y: x * y, numbers)
+# product is now the result of multiplying all elements: 120
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Use Cases:
+                                <ul>
+                                    <li>These functions are useful for concise and expressive functional programming.
+                                        They promote the use of pure functions and can lead to more readable and
+                                        declarative code.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Functional programming encourages the use of immutable data and avoids changing the state of
+                    variables. It emphasizes higher-order functions, pure functions, and declarative programming style.
+                    While Python is not a purely functional language, it provides functional programming features that
+                    can be leveraged to write clean and expressive code.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Working_with_APIs">
+            <header class="main-header">Working with APIs</header>
+            <article>
+                <p>Working with APIs (Application Programming Interfaces) in Python involves making HTTP requests to
+                    access and interact with remote services. Typically, APIs return data in JSON format, and Python
+                    provides libraries to handle both making HTTP requests and parsing JSON responses. Two commonly used
+                    libraries for this purpose are 'requests' for making HTTP requests and the built-in 'json' module
+                    for parsing JSON.</p>
+                <ol>
+                    <li>Making HTTP Requests with 'requests' Library:
+                        <ul>
+                            <li>Installation:
+                                <ul>
+                                    <li>If you don't have the 'requests' library installed, you can install it using:
+                                    </li>
+                                    <code>
+pip install requests
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Making GET Request:
+                                <ul>
+                                    <code>
+import requests
+
+url = "https://api.example.com/data"
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f"Error: {response.status_code}")
+                                    </code>
+                                </ul>
+                            </li>
+                            <li>Making POST Request:
+                                <ul>
+                                    <code>
+mport requests
+
+url = "https://api.example.com/post_data"
+payload = {"key": "value"}
+
+response = requests.post(url, json=payload)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f"Error: {response.status_code}")
+                                    </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Parsing JSON Responses:
+                        <ul>
+                            <li>Using the 'json' Module:
+                                <ul>
+                                    <li>The 'json' module in Python provides methods to encode and decode JSON data.
+                                        When working with API responses, you can use it to parse JSON content.</li>
+                                    <code>
+import requests
+import json
+
+url = "https://api.example.com/data"
+response = requests.get(url)
+
+if response.status_code == 200:
+json_data = response.json()
+print(json_data)
+else:
+print(f"Error: {response.status_code}")
+                                    </code>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Handiling Authentication:
+                        <ul>
+                            <li>API Key Authentication: </li>
+                            <code>
+import requests
+
+url = "https://api.example.com/data"
+api_key = "your_api_key"
+
+headers = {"Authorization": f"Bearer {api_key}"}
+response = requests.get(url, headers=headers)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f"Error: {response.status_code}")
+                            </code>
+                            <li>OAuth Authentication:
+                                <code>
+import requests
+
+url = "https://api.example.com/data"
+access_token = "your_access_token"
+
+headers = {"Authorization": f"Bearer {access_token}"}
+response = requests.get(url, headers=headers)
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f"Error: {response.status_code}")
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Error Handiling:
+                        <ul>
+                            <li>Always check the HTTP status code in the response to handle errors appropriately. A
+                                status code of 200 typically indicates a successful request, while codes in the 4xx or
+                                5xx range indicate errors.</li>
+                            <li>Use 'try' and 'except' blocks to handle exceptions that may occur during the API
+                                request.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Working with APIs in Python allows you to integrate your applications with external services and
+                    retrieve or send data. Understanding how to make HTTP requests, handle authentication, and parse
+                    JSON responses is fundamental for interacting with modern web APIs.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Working_with_Databases_in_Python">
+            <header class="main-header">Working with Databases in Python</header>
+            <article>
+                <p>Python provides several libraries for interacting with databases, both relational and non-relational.
+                    Popular relational databases include SQLite, MySQL, and PostgreSQL. In this explanation, I'll cover
+                    connecting to a database and performing CRUD operations (Create, Read, Update, Delete) using SQLite
+                    as an example. The principles are similar for other databases, with the main difference being the
+                    specific library used.</p>
+                <p class="header">Connecting to a DATabase: </p>
+                <ol>
+                    <li>SQLite:
+                        <ul>
+                            <li>Installation: SQLite comes pre-installed with Python, so no additional installation is
+                                needed.
+                            </li>
+                            <li>Connecting:
+                                <code>
+import sqlite3
+
+# Connect to an SQLite database (creates a new database if not exists)
+connection = sqlite3.connect('example.db')
+
+# Create a cursor object to interact with the database
+cursor = connection.cursor()
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>MySQL:
+                        <ul>
+                            <li>Installation:
+                                <code>
+pip install mysql-connector-python
+                                </code>
+                            </li>
+                            <li>Connecting:
+                                <code>
+import mysql.connector
+
+# Connect to a MySQL database
+connection = mysql.connector.connect(
+    host="your_host",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+# Create a cursor object
+cursor = connection.cursor()
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p class="header">CRUD Operations: </p>
+                <ol>
+                    <li>Create (Insert):
+                        <code>
+# SQLite
+cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)")
+connection.commit()
+
+# MySQL
+cursor.execute("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), age INT)")
+connection.commit()
+
+# Insert data
+cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ("John", 25))
+connection.commit()
+                        </code>
+                    </li>
+                    <li>Read (Select):
+                        <code>
+ # Select all data
+cursor.execute("SELECT * FROM users")
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+                        </code>
+                    </li>
+                    <li>Update:
+                        <code>
+# Update data
+cursor.execute("UPDATE users SET age = ? WHERE name = ?", (26, "John"))
+connection.commit()
+                        </code>
+                    </li>
+                    <li>Delete:
+                        <code>
+# Delete data
+cursor.execute("DELETE FROM users WHERE name = ?", ("John",))
+connection.commit()
+                        </code>
+                    </li>
+                </ol>
+                <p class="header">Closing the Connection:
+                </p>
+
+                <p class="content">Always remember to close the database connection when you're done with it. </p>
+                <code>
+# Close the cursor and connection
+cursor.close()
+connection.close()
+                </code>
+                <p class="header">Note: </p>
+                <ul>
+                    <li>For larger projects and ORM (Object-Relational Mapping) capabilities, you may want to explore
+                        libraries like SQLAlchemy.</li>
+                    <li>When dealing with databases, especially in production, it's important to handle exceptions,
+                        transactions, and manage connections effectively for reliability and security</li>
+                    <li>The database-specific libraries often provide additional functionalities and optimizations.
+                        Always refer to the doccumentation for the specific database and library you are using.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>You can refer to <a href="https://www.google.con">Google</a> and search for the specific topic you
+                wish to know in detail.</article>
+        </section>
+    </main>
+</body>
+
+</html>
