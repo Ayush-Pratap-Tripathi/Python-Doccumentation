@@ -38,11 +38,11 @@ Ensure you have a browser installed to view the HTML page.
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/python-documentation.git
+   git clone https://github.com/Ayush-Pratap-Tripathi/python-doccumentation.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd python-documentation
+   cd python-doccumentation
    ```
 3. Open the `python_doccumentation.html` file in your preferred browser to view the documentation.
 
